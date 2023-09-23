@@ -1,0 +1,12 @@
+.highlights {
+    display: grid;
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 2px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    border: 2px solid blue;
+    width: fit-content;
+}

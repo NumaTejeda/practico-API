@@ -1,0 +1,7 @@
+.lateral{
+    display: block;
+    border: 2px solid blue;
+    margin: 5px;
+    width: 220px;
+    height: 100%;
+}

@@ -1,0 +1,7 @@
+.today{
+    display: flex;
+    border: 2px solid blue;
+    margin: 5px;
+    height: 100px;
+    width: 668px;
+}
