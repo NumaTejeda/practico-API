@@ -1,4 +1,9 @@
 .left{
-    display: block;
+    display: flex;
+    flex-direction: column;
     height:90vh;
+    width: calc(100% - 10px);
+    border: 1px solid blue;
+    margin: 5px;
+    justify-content: space-between;
 }

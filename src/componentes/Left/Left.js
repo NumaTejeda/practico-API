@@ -1,10 +1,13 @@
 import './Left.css';
-import Lateral from './Lateral/Lateral';
 
 function Left(){
     return(
         <div className="left">
-            <Lateral/>
+            <h1>Temperatura Monday 17</h1>
+            <div>
+                <h2>High: 30°</h2>
+                <h2>Low: 19°</h2>
+            </div>
         </div>
     )
 }

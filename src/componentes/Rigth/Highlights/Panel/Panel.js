@@ -3,7 +3,6 @@ import './Panel.css';
 
 function Panel(props){
 
-
     return(
         <div className='panel'>
             <h4>{props.title}</h4>

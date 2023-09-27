@@ -1,7 +1,11 @@
 .today{
     display: flex;
-    border: 2px solid blue;
+    justify-content: space-evenly;
+    border: 1px dashed blue;
+    border-radius: 5px;
     margin: 5px;
     height: 100px;
-    width: 668px;
+    padding: 5px;
+    max-width: 500px;
+    background-color: orange;
 }

@@ -5,12 +5,36 @@ function Highlights(){
 
     return(
         <div className="highlights">
-            <Panel />
-            <Panel />
-            <Panel />
-            <Panel />
-            <Panel />
-            <Panel />
+            <Panel
+                title='Humedity'
+                dataNumber='12'
+                dataString='Normal'
+            />
+            <Panel 
+                title='Humedity'
+                dataNumber='12'
+                dataString='Normal'
+            />
+            <Panel 
+                title='Humedity'
+                dataNumber='12'
+                dataString='Normal'
+            />
+            <Panel
+                title='Humedity'
+                dataNumber='12'
+                dataString='Normal'
+            />
+            <Panel 
+                title='Humedity'
+                dataNumber='12'
+                dataString='Normal'
+            />
+            <Panel
+                title='Humedity'
+                dataNumber='12'
+                dataString='Normal'
+            />
         </div>
 
     )

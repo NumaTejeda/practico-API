@@ -1,5 +1,14 @@
 .App{
     display: flex;
+    box-sizing: border-box;
     margin: 5px;
+    margin-right: 5px;
     border: 2px solid red;
+    width: fit-content;
+    background-color:aquamarine;
+}
+@media only screen and (max-width: 576px) {
+    .App{
+        display: block;
+    }
 }
