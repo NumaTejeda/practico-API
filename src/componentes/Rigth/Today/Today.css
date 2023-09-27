@@ -8,4 +8,23 @@
     padding: 5px;
     max-width: 500px;
     background-color: orange;
+    overflow-y: auto;
+}
+.ejeX{
+    width: fit-content;
+}
+.ejeX>ul{
+    list-style: none;
+    padding: 0 5px 0 0;
+}
+@media only screen and (max-width: 662px) {
+    .today{
+        max-height: fit-content;
+        max-width: 100%;
+    }
+    .ejeX{
+        position: sticky;
+        left: 0px;
+        color: red;
+    }
 }

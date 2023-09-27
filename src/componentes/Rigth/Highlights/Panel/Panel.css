@@ -1,6 +1,5 @@
 .panel{
     display: flex;
-    flex-wrap: wrap;
     box-sizing: border-box;
     flex-direction: column;
     justify-content: space-between;
@@ -8,15 +7,15 @@
     border-radius: 5px;
     padding: 5px;
     margin: 2px;
-    height: 120px;
-    max-width: 220px;
-    min-width: 150px;
+    max-height: 120px;
+    max-width: 150px;
+    min-width: 135px;
     background-color: white;
 }
 .panel> h1, h4, p{
     margin: 0;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 662px) {
     .panel{
         max-width: 100%;
         justify-content: center;

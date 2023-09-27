@@ -5,7 +5,7 @@ function Today(){
 
     return(
         <div className="today">
-            <div>
+            <div className="ejeX">
                 <ul>
                     <li>40</li>
                     <li>20</li>

@@ -2,13 +2,17 @@
     display: flex;
     box-sizing: border-box;
     margin: 5px;
-    margin-right: 5px;
+    margin-right: 10px;
     border: 2px solid red;
     width: fit-content;
+    max-height: 500px;
     background-color:aquamarine;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 662px) {
     .App{
-        display: block;
+        flex-direction: column;
+        max-height: fit-content;
+        width: calc(100% - 10px);
+        align-content: center;
     }
 }

@@ -1,6 +1,6 @@
 import Highlights from "./Highlights/Highlights";
 import Today from "./Today/Today";
-
+import './Right.css';
 function Right(){
     return(
         <div className='right'>
