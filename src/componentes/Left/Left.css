@@ -7,3 +7,8 @@
     margin: 5px;
     justify-content: space-between;
 }
+@media only screen and (max-width: 576px) {
+    .left{
+        height: 30vh;
+    }
+}
