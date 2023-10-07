@@ -3,19 +3,20 @@
     box-sizing: border-box;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid red;
     border-radius: 5px;
     padding: 5px;
     margin: 2px;
     max-height: 120px;
     max-width: 150px;
     min-width: 135px;
-    background-color: white;
+    background-color: rgb(0 0 0 / 49%);
+    color: white;
+    text-shadow: 2px 2px 2px black;
 }
 .panel> h1, h4, p{
     margin: 0;
 }
-@media only screen and (max-width: 662px) {
+@media only screen and (max-width: 647px) {
     .panel{
         max-width: 100%;
         justify-content: center;

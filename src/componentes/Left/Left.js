@@ -1,12 +1,14 @@
 import './Left.css';
+import nube from '../nube.png';
 
-function Left(){
+function Left({diaActual, tempActual, maxTempToDay, lowTempToDay}){
     return(
         <div className="left">
-            <h1>Temperatura Monday 17</h1>
+            <h1>{diaActual} {tempActual + '°'}</h1>
+            <img src={nube} alt="nube" id="img"></img>
             <div>
-                <h2>High: 30°</h2>
-                <h2>Low: 19°</h2>
+                <h2>High: {maxTempToDay}°</h2>
+                <h2>Low: {lowTempToDay}°</h2>
             </div>
         </div>
     )

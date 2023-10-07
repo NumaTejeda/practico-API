@@ -1,39 +1,41 @@
 import Panel from "./Panel/Panel";
 import './Highlights.css';
 
-function Highlights(){
+function Highlights({datos}){
 
     return(
         <div className="highlights">
             <Panel
-                title='Humedity'
-                dataNumber='12'
+                title='UV Index'
+                dataNumber1={datos.indiceUV}
                 dataString='Normal'
             />
             <Panel 
-                title='Humedity'
-                dataNumber='12'
-                dataString='Normal'
+                title='Wind Status'
+                dataNumber1={datos.velocidadViento}
+                dataString='Tranqui'
             />
             <Panel 
-                title='Humedity'
-                dataNumber='12'
-                dataString='Normal'
+                title='Sunrise & Sunset'
+                dataNumber1={datos.amanecer + " AM"}
+                dataNumber2={datos.atardecer + " PM"}
+                dataString='Ta lindo'
             />
             <Panel
                 title='Humedity'
-                dataNumber='12'
+                dataNumber1={datos.humedad + " %"}
                 dataString='Normal'
             />
             <Panel 
-                title='Humedity'
-                dataNumber='12'
-                dataString='Normal'
+                title='Visibility'
+                dataNumber1={datos.visibilidad + " km"}
+                dataString='Average'
             />
             <Panel
-                title='Humedity'
-                dataNumber='12'
-                dataString='Normal'
+                title='Air Quality'
+                dataNumber1={datos.calidadDeAire}
+                dataString='Unhealthy'
+                
             />
         </div>
 

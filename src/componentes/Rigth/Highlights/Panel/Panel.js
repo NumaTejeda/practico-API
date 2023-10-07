@@ -5,8 +5,9 @@ function Panel(props){
 
     return(
         <div className='panel'>
-            <h4>{props.title}</h4>
-            <h1>{props.dataNumber}</h1>
+            <h5>{props.title}</h5>
+            <h3>{props.dataNumber1}</h3>
+            { props.dataNumber2 ? <h3>{props.dataNumber2}</h3> : null}
             <p>{props.dataString}</p>
         </div>
     )

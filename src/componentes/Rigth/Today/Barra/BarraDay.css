@@ -5,10 +5,11 @@
     justify-content: flex-end;
 }
 #barra{
-    height: 40px;
     width: 10px;
     background-color: greenyellow;
 }
 #hora{
     margin: 0;
+    color: white;
+    text-shadow: 2px 2px 2px black;
 }
