@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/practico-API/static/css/main.64090b19.css",
-    "main.js": "/practico-API/static/js/main.5857ee8b.js",
+    "main.css": "/practico-API/static/css/main.dcf2af17.css",
+    "main.js": "/practico-API/static/js/main.ebbbba71.js",
     "index.html": "/practico-API/index.html",
-    "main.64090b19.css.map": "/practico-API/static/css/main.64090b19.css.map",
-    "main.5857ee8b.js.map": "/practico-API/static/js/main.5857ee8b.js.map"
+    "main.dcf2af17.css.map": "/practico-API/static/css/main.dcf2af17.css.map",
+    "main.ebbbba71.js.map": "/practico-API/static/js/main.ebbbba71.js.map"
   },
   "entrypoints": [
-    "static/css/main.64090b19.css",
-    "static/js/main.5857ee8b.js"
+    "static/css/main.dcf2af17.css",
+    "static/js/main.ebbbba71.js"
   ]
 }
