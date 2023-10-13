@@ -1,15 +1,35 @@
 import './Left.css';
 import nube from '../nube.png';
 
-function Left({diaActual, tempActual, maxTempToDay, lowTempToDay}){
-    return(
+function Left({ data, loading }) {
+
+    const currentTemp = data?.current_weather?.temperature;
+    const currentDayCode = data?.current_weather.is_day;
+    const toDay = data?.daily?.time[currentDayCode];
+    const highToDay = data?.daily?.temperature_2m_max[currentDayCode];
+    const lowToDay = data?.daily?.temperature_2m_min[currentDayCode];
+
+    return (
         <div className="left">
-            <h1>{diaActual} {tempActual + '°'}</h1>
-            <img src={nube} alt="nube" id="img"></img>
-            <div>
-                <h2>High: {maxTempToDay}°</h2>
-                <h2>Low: {lowTempToDay}°</h2>
-            </div>
+            {data && !loading ? 
+            <>
+                <h1>{toDay} {currentTemp + '°'}</h1>
+                <img src={nube} alt="nube" id="img"></img>
+                <div>
+                    <h2>High: {highToDay}°</h2>
+                    <h2>Low: {lowToDay}°</h2>
+                </div>
+            </>
+            :                   
+            <>
+                <h1>Cargandoooo......</h1>
+                <img src={nube} alt="nube" id="img"></img>
+                <div>
+                    <h2>High: Cargando....</h2>
+                    <h2>Low: Cargando...</h2>
+                </div>
+            </>
+        }
         </div>
     )
 }

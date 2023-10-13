@@ -1,15 +1,15 @@
 import Highlights from "./Highlights/Highlights";
 import Today from "./Today/Today";
 import './Right.css';
-function Right(props){
+function Right({data, loading, obtenerHora}){
 
 
     return(
         <div className='right'>
             <h1>Today</h1>
-            <Today datos={props}/>
+            <Today data={data} loading={loading}/>
             <h1>Highlights</h1>
-            <Highlights datos={props}/>
+            <Highlights data={data} loading={loading} obtenerHora={obtenerHora}/>
         </div>
     )
 }

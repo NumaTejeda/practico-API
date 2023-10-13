@@ -1,39 +1,48 @@
 import Panel from "./Panel/Panel";
 import './Highlights.css';
 
-function Highlights({datos}){
+function Highlights({data, obtenerHora}){
+
+
+      const humedity = data?.hourly?.relativehumidity_2m[0]; //elijo cualquier hora
+      const visibility = data?.hourly?.visibility[4]/1000;
+      const precipitation_probability = data?.hourly?.precipitation_probability[0];
+      const uvIndex = data?.hourly?.uv_index[0];
+      const speedWind = data?.hourly?.windspeed_10m[0];
+      const sunRise = data?.daily?.sunrise[0].split('T')[1];
+      const sunSet = data?.daily?.sunset[0].split('T')[1];
 
     return(
         <div className="highlights">
             <Panel
                 title='UV Index'
-                dataNumber1={datos.indiceUV}
+                dataNumber1={uvIndex}
                 dataString='Normal'
             />
             <Panel 
                 title='Wind Status'
-                dataNumber1={datos.velocidadViento}
+                dataNumber1={speedWind}
                 dataString='Tranqui'
             />
             <Panel 
                 title='Sunrise & Sunset'
-                dataNumber1={datos.amanecer + " AM"}
-                dataNumber2={datos.atardecer + " PM"}
+                dataNumber1={sunRise + " AM"}
+                dataNumber2={sunSet + " PM"}
                 dataString='Ta lindo'
             />
             <Panel
                 title='Humedity'
-                dataNumber1={datos.humedad + " %"}
+                dataNumber1={humedity + " %"}
                 dataString='Normal'
             />
             <Panel 
                 title='Visibility'
-                dataNumber1={datos.visibilidad + " km"}
+                dataNumber1={visibility+ " km"}
                 dataString='Average'
             />
             <Panel
-                title='Air Quality'
-                dataNumber1={datos.calidadDeAire}
+                title='Prob. de lluvia'
+                dataNumber1={precipitation_probability+" %"}
                 dataString='Unhealthy'
                 
             />
