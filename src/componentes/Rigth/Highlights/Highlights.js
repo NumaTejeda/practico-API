@@ -3,14 +3,15 @@ import './Highlights.css';
 
 function Highlights({data, obtenerHora}){
 
+   
 
-      const humedity = data?.hourly?.relativehumidity_2m[0]; //elijo cualquier hora
-      const visibility = data?.hourly?.visibility[4]/1000;
-      const precipitation_probability = data?.hourly?.precipitation_probability[0];
-      const uvIndex = data?.hourly?.uv_index[0];
-      const speedWind = data?.hourly?.windspeed_10m[0];
-      const sunRise = data?.daily?.sunrise[0].split('T')[1];
-      const sunSet = data?.daily?.sunset[0].split('T')[1];
+    const humedity = data?.hourly?.relativehumidity_2m[0]; //elijo cualquier hora
+    const visibility = data?.hourly?.visibility[4]/1000;
+    const precipitation_probability = data?.hourly?.precipitation_probability[0];
+    const uvIndex = data?.hourly?.uv_index[0];
+    const speedWind = data?.hourly?.windspeed_10m[0];
+    const sunRise = data?.daily?.sunrise[0].split('T')[1];
+    const sunSet = data?.daily?.sunset[0].split('T')[1];
 
     return(
         <div className="highlights">

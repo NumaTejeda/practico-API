@@ -1,6 +1,6 @@
 import BarraDay from './Barra/BarraDay';
 import './Today.css';
-function Today({data, loading}) {
+function Today({data}) {
 
     const temp07 = data?.hourly?.temperature_2m[7].toString()+"px";
     const temp09 = data?.hourly?.temperature_2m[9].toString()+"px";

@@ -4,11 +4,10 @@ import nube from '../nube.png';
 function Left({ data, loading }) {
 
     const currentTemp = data?.current_weather?.temperature;
-    const currentDayCode = data?.current_weather.is_day;
-    const toDay = data?.daily?.time[currentDayCode];
-    const highToDay = data?.daily?.temperature_2m_max[currentDayCode];
-    const lowToDay = data?.daily?.temperature_2m_min[currentDayCode];
-
+    const toDay = data?.daily?.time[0];
+    const highToDay = data?.daily?.temperature_2m_max[0];
+    const lowToDay = data?.daily?.temperature_2m_min[0];
+    // (idea) useState para src y otro para frase que acompaña, con codigoClima que busca dentro del json de codigos.
     return (
         <div className="left">
             {data && !loading ? 
@@ -22,11 +21,11 @@ function Left({ data, loading }) {
             </>
             :                   
             <>
-                <h1>Cargandoooo......</h1>
+                <h4 style={{color: 'white'}}>Cargandoooo......</h4>
                 <img src={nube} alt="nube" id="img"></img>
                 <div>
-                    <h2>High: Cargando....</h2>
-                    <h2>Low: Cargando...</h2>
+                    <h4 style={{color: 'white'}}>High: cargando... </h4>
+                    <h4 style={{color: 'white'}}>Low: Cargando...</h4>
                 </div>
             </>
         }

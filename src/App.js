@@ -4,7 +4,6 @@ import Right from './componentes/Rigth/Right';
 import { useState, useEffect } from 'react';
 
 function App() {
-  //const data = require('./data.json');
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(null);
@@ -31,7 +30,7 @@ function App() {
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
-  }, []); // El segundo argumento vacío asegura que esto se ejecute solo una vez
+  }, [loading]); // El segundo argumento vacío asegura que esto se ejecute solo una vez
 
   ////// FUNCION RECARGAR
   function recargar(){
@@ -55,7 +54,7 @@ function App() {
       data={data}
       loading={loading}
       />
-      {/* <button onClick={obtenerHora}>Hora</button> */}
+      {/* <button onClick={recargar}>Hora</button> */}
       <Right 
       data={data}
       loading={loading}
