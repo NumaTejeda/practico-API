@@ -33,32 +33,19 @@ function App() {
   }, [loading]); // El segundo argumento vacío asegura que esto se ejecute solo una vez
 
   ////// FUNCION RECARGAR
-  function recargar(){
+  function recargar() {
     setLoading(true);
-    console.log("Explocion!")
   }
-  ////// FUNCION OBTENER LOCALHOUR FORMATO hh
-  // const obtenerHora = ()=> {
-  //   const fecha = new Date();
-  //   const horas = fecha.getHours();
-  
-  //   // Verificar si las horas son menores a 10 y devolver solo la segunda cifra
-  //   const horaEnFormatoHH = horas < 10 ? horas : horas.toString();
-  
-  //   return horaEnFormatoHH;
-  // }
-  
   return (
     <div className="App">
-      <Left 
-      data={data}
-      loading={loading}
+      <Left
+        data={data}
+        loading={loading}
+        recargar={() => recargar()}
       />
-      {/* <button onClick={recargar}>Hora</button> */}
-      <Right 
-      data={data}
-      loading={loading}
-      // obtenerHora={obtenerHora}
+      <Right
+        data={data}
+        loading={loading}
       />
     </div>
   );

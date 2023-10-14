@@ -1,13 +1,13 @@
-.right{
-    display: flex;
-    flex-direction: column;
+.right {
+  display: flex;
+  flex-direction: column;
 }
-.right>h1{
-    margin-left: 15px;
+.right > h1 {
+  margin-left: 15px;
 }
 
 @media only screen and (max-width: 640px) {
-    h1{
-        align-self: center;
-    }
+  h1 {
+    align-self: center;
+  }
 }

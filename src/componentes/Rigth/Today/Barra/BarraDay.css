@@ -1,15 +1,15 @@
-.barraDay{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+.barraDay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
-#barra{
-    width: 10px;
-    background-color: greenyellow;
+#barra {
+  width: 10px;
+  background-color: greenyellow;
 }
-#hora{
-    margin: 0;
-    color: white;
-    text-shadow: 2px 2px 2px black;
+#hora {
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }

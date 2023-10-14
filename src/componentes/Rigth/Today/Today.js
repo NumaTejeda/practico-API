@@ -1,15 +1,15 @@
 import BarraDay from './Barra/BarraDay';
 import './Today.css';
-function Today({data}) {
+function Today({ data }) {
 
-    const temp07 = data?.hourly?.temperature_2m[7].toString()+"px";
-    const temp09 = data?.hourly?.temperature_2m[9].toString()+"px";
-    const temp11 = data?.hourly?.temperature_2m[11].toString()+"px";
-    const temp12 = data?.hourly?.temperature_2m[12].toString()+"px";
-    const temp14 = data?.hourly?.temperature_2m[14].toString()+"px";
-    const temp16 = data?.hourly?.temperature_2m[16].toString()+"px";
-    const temp18 = data?.hourly?.temperature_2m[18].toString()+"px";
-   
+    const temp07 = data?.hourly?.temperature_2m[7].toString() + "px";
+    const temp09 = data?.hourly?.temperature_2m[9].toString() + "px";
+    const temp11 = data?.hourly?.temperature_2m[11].toString() + "px";
+    const temp12 = data?.hourly?.temperature_2m[12].toString() + "px";
+    const temp14 = data?.hourly?.temperature_2m[14].toString() + "px";
+    const temp16 = data?.hourly?.temperature_2m[16].toString() + "px";
+    const temp18 = data?.hourly?.temperature_2m[18].toString() + "px";
+
     return (
         <div className="today">
             <div className="ejeX">

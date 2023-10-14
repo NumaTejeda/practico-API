@@ -1,10 +1,10 @@
 import './BarraDay.css';
-function BarraDay(props){
+function BarraDay(props) {
 
 
-    return(
+    return (
         <div className='barraDay'>
-            <div id='barra' style={{height: props.altura}}></div>
+            <div id='barra' style={{ height: props.altura }}></div>
             <p id='hora'>{props.horaDia}</p>
         </div>
     )
