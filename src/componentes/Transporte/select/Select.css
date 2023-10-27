@@ -1,0 +1,9 @@
+.select-bondis{
+    position: absolute; 
+    top: 10px;
+    right: 10px;
+    z-index: 99999;
+    padding: 5px;
+    border-radius: 7px;
+    width: 15vw;
+}

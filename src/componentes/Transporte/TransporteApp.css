@@ -1,0 +1,22 @@
+#AppTransporte{
+    width: 100%;
+    height: calc(100vh - 10px);
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+}
+.leaflet-container {
+    width: 100wh; 
+    height: 100%;
+    border-radius: 10px;
+    overflow-x: hidden;
+}
+.Container{
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+button{
+    z-index: 10;
+    right: 10px;
+}

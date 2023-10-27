@@ -11,7 +11,6 @@ function Highlights({ data, loading }) {
         // Verificar si las horas son menores a 10 y devolver solo la segunda cifra
         const horaEnFormatoHH = horas < 10 ? horas : horas.toString();
 
-        console.log(horaEnFormatoHH);
         return horaEnFormatoHH;
     }
     setInterval(obtenerHora, 3600000);
@@ -36,7 +35,7 @@ function Highlights({ data, loading }) {
                     />
                     <Panel
                         title='Wind Status'
-                        dataNumber1={speedWind+"km/h"}
+                        dataNumber1={speedWind + "km/h"}
                         dataString='Tranqui'
                     />
                     <Panel
