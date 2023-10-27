@@ -1,46 +1,24 @@
+import green from '../../assets/transporteSVG/marker-icon-2x-green.png';
+import blue from '../../assets/transporteSVG/marker-icon-2x-blue.png';
+import red from '../../assets/transporteSVG/marker-icon-2x-red.png';
+import yellow from '../../assets/transporteSVG/marker-icon-2x-yellow.png';
+import orange from '../../assets/transporteSVG/marker-icon-2x-orange.png';
+import pink from '../../assets/transporteSVG/marker-icon-2x-orange.png';
+import violet from '../../assets/transporteSVG/marker-icon-2x-violet.png';
+import gray from '../../assets/transporteSVG/marker-icon-2x-grey.png';
+import gold from '../../assets/transporteSVG/marker-icon-2x-gold.png';
+import black from '../../assets/transporteSVG/marker-icon-2x-black.png';
+
 const colores = {
-	blue: {
-		iconUrl: "./img/marker-icon-2x-blue.png",
-		shadowUrl: "./img/marker-shadow.png"
-	},
-
-	goldIcon: {
-		iconUrl: "./img/marker-icon-2x-gold.png",
-		shadowUrl: "./img/marker-shadow.png"
-	},
-	redIcon: {
-		iconUrl: "./img/marker-icon-2x-red.png",
-		shadowUrl: "./img/marker-shadow.png"
-	},
-
-	green: {
-		iconUrl: "./img/marker-icon-2x-green.png",
-		shadowUrl: "./img/marker-shadow.png"
-	},
-
-	orange: {
-		iconUrl: "./img/marker-icon-2x-orange.png",
-		shadowUrl: "./img/marker-shadow.png"
-	},
-
-	yellow: {
-		iconUrl: "./img/marker-icon-2x-yellow.png",
-		shadowUrl: "./img/marker-shadow.png"
-	},
-
-	violet: {
-		iconUrl: "./img/marker-icon-2x-violet.png",
-		shadowUrl: "./img/marker-shadow.png"
-	},
-
-	grey: {
-		iconUrl: "./img/marker-icon-2x-grey.png",
-		shadowUrl: "./img/marker-shadow.png"
-	},
-
-	black: {
-		iconUrl: "./img/marker-icon-2x-black.png",
-		shadowUrl: "./img/marker-shadow.png"
-	}
-}
+	"21J": `${green}`,
+	"21D": `${blue}`,
+	"21G": `${red}`,
+	"21A": `${yellow}`,
+	"21C": `${orange}`,
+	"21E": `${pink}`,
+	"21B": `${violet}`,
+	"108A": `${gray}`,
+	"21F": `${gold}`,
+	"21I": `${black}`
+  };
 export default colores;

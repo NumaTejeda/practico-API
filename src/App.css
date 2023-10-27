@@ -1,7 +1,11 @@
 .App{
     display: flex;
 }
-/* .leaflet-container {
-    width: 100wh; 
-    height: 100vh;
-} */
+@media only screen and (max-width: 640px) {
+    .App {
+      flex-direction: column;
+      max-height: fit-content;
+      width: calc(100% - 10px);
+      align-content: center;
+    }
+  }

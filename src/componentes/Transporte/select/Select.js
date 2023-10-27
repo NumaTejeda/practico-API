@@ -1,9 +1,9 @@
 import './Select.css';
 function Select({ setFiltro, data }) {
 
-    const handleSelectChange = (event) => {
-        console.log(event.target.value)
-        setFiltro(event.target.value); // Actualiza el estado con la opción seleccionada.
+    const handleSelectChange = (e) => {
+        console.log(e.target.value)
+        setFiltro(e.target.value); // Actualiza el estado con la opción seleccionada.
     };
 
     const sinDuplicados = new Set();
@@ -25,6 +25,7 @@ function Select({ setFiltro, data }) {
                 name="bondis"
                 className='select-bondis'
                 onChange={handleSelectChange}>
+                <option value='inicio'>Eleji tu bondi</option>
                 {options}
             </select>
         </>
