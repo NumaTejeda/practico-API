@@ -8,6 +8,7 @@ import colores from './markerColor';
 
 function TransporteApp() {
     const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(null);
     const [filtro, setFiltro] = useState("inicio"); // Estado para almacenar la opción seleccionada.
     const COLOR = data ? colores[filtro] : null;
 
@@ -37,13 +38,16 @@ function TransporteApp() {
             .then((responseData) => {
                 // Almacena los datos en la variable de estado 'data'
                 setData(responseData);
-                //setLoading(false);
+                setLoading(false);
             })
             .catch((error) => {
                 console.error('Error fetching data:', error);
             });
-    }, []);
-    //icon={blueIcon}
+    }, [loading]);
+
+    function actualizar() {
+        console.log("Nuevo fetch");
+    }
 
     const mappedData = data ? data.filter((item) => filtro === "" || item.route_short_name === filtro)
         .map((item, index) => (
@@ -60,6 +64,7 @@ function TransporteApp() {
             <div id='AppTransporte'>
                 <MapContainer center={[-34.605425, -58.381555]} zoom={12} scrollWheelZoom={false}>
                     <Select setFiltro={setFiltro} data={data} />
+                    <button className='actualizar' onClick={actualizar}>Actualizar</button>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

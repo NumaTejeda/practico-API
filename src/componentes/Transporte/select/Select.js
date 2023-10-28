@@ -2,7 +2,6 @@ import './Select.css';
 function Select({ setFiltro, data }) {
 
     const handleSelectChange = (e) => {
-        console.log(e.target.value)
         setFiltro(e.target.value); // Actualiza el estado con la opción seleccionada.
     };
 

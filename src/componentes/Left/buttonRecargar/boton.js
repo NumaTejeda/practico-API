@@ -1,7 +1,7 @@
 import './boton.css';
 function boton({ recargar }) {
     return (
-        <button onClick={recargar}>recargar</button>
+        <button onClick={recargar}>Recargar</button>
     )
 }
 export default boton;

@@ -16,7 +16,9 @@
     flex-direction: column;
     width: 100%; 
 }
-button{
-    z-index: 10;
-    right: 10px;
+.actualizar{
+    position: absolute;
+    z-index: 100000;
+    left: 10px;
+    bottom: 10px;
 }
