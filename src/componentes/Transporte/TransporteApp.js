@@ -7,11 +7,14 @@ import SHADOW from '../../assets/transporteSVG/marker-shadow.png';
 import colores from './markerColor';
 
 function TransporteApp() {
+    const coordenadasDefault = [-34.605425, -58.381555]; 
+    const [puntoMedio, setPuntoMedio] = useState(coordenadasDefault);
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(null);
     const [filtro, setFiltro] = useState("inicio"); // Estado para almacenar la opción seleccionada.
     const COLOR = data ? colores[filtro] : null;
 
+    
     const colorIcon = new icon({
         iconUrl:`${COLOR}`,
         shadowUrl: `${SHADOW}`,
@@ -20,8 +23,8 @@ function TransporteApp() {
         popupAnchor: [1, -34],
         shadowSize: [41, 41]
     });
-
-
+    
+    
     const url = 'https://datosabiertos-transporte-apis.buenosaires.gob.ar:443/colectivos/vehiclePositionsSimple?agency_id=16&client_id=cb6b18c84b3b484d98018a791577af52&client_secret=3e3DB105Fbf642Bf88d5eeB8783EE1E6&route_short_name=108A';
     useEffect(() => {
         // Realiza la solicitud utilizando fetch con el método GET
@@ -29,25 +32,42 @@ function TransporteApp() {
             method: 'GET',
             redirect: 'follow',
         })
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error(alert('UPS! Vuelvo a intentarlo mas tarde...'));
-                }
-                return response.json();
-            })
-            .then((responseData) => {
-                // Almacena los datos en la variable de estado 'data'
-                setData(responseData);
-                setLoading(false);
-            })
-            .catch((error) => {
-                console.error('Error fetching data:', error);
-            });
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(alert('UPS! Vuelvo a intentarlo mas tarde...'));
+            }
+            return response.json();
+        })
+        .then((responseData) => {
+            // Almacena los datos en la variable de estado 'data'
+            setData(responseData);
+            setLoading(false);
+        })
+        .catch((error) => {
+            console.error('Error fetching data:', error);
+        });
+        
     }, [loading]);
-
+    
     function actualizar() {
-        console.log("Nuevo fetch");
+        setLoading(true);
     }
+    
+    const calcularPuntoMedio = () => {
+        let seleccion = data ? data.filter((item) => item.route_short_name === filtro) : null;
+        console.log(seleccion)
+        let sumX = 0;
+        let sumY = 0;
+        let division = 0; 
+        for (let i = 0; i <seleccion.length; i++) {
+            sumX += seleccion[i]["longitude"];
+            sumY += seleccion[i]["latitude"];
+            division += 1;
+        }
+        const puntoMedio = [sumX / division,  sumY / division];
+        console.log(puntoMedio);
+        setPuntoMedio(puntoMedio);
+    };
 
     const mappedData = data ? data.filter((item) => filtro === "" || item.route_short_name === filtro)
         .map((item, index) => (
@@ -57,13 +77,13 @@ function TransporteApp() {
                     {item.trip_headsign}
                 </Popup>
             </Marker>
-        )) : null;
+    )) : null;
 
     return (
         <>
             <div id='AppTransporte'>
-                <MapContainer center={[-34.605425, -58.381555]} zoom={12} scrollWheelZoom={false}>
-                    <Select setFiltro={setFiltro} data={data} />
+                <MapContainer center={[puntoMedio[0], puntoMedio[1]]} zoom={12} scrollWheelZoom={false}>
+                    <Select setFiltro={setFiltro} data={data} calcularPuntoMedio={calcularPuntoMedio}/>
                     <button className='actualizar' onClick={actualizar}>Actualizar</button>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

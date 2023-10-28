@@ -1,8 +1,9 @@
 import './Select.css';
-function Select({ setFiltro, data }) {
+function Select({ setFiltro, data, calcularPuntoMedio }) {
 
     const handleSelectChange = (e) => {
         setFiltro(e.target.value); // Actualiza el estado con la opción seleccionada.
+        calcularPuntoMedio();
     };
 
     const sinDuplicados = new Set();
