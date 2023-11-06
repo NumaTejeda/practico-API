@@ -8,12 +8,12 @@
   max-height: 100vh;
   max-width: 657px;
   border-radius: 10px;
-  background-image: url(https://www.fondoin.gob.ve/wp-content/uploads/2022/08/PORTADA.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 h1, h2 {
   color: white;
+  z-index: 10;
   text-shadow: 2px 2px 2px black;
 }
 @media only screen and (max-width: 640px) {

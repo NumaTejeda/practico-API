@@ -1,0 +1,95 @@
+{
+    "La Plata": {
+      "latitud": -34.9214,
+      "longitud": -57.9547
+    },
+    "Catamarca": {
+      "latitud": -28.4696,
+      "longitud": -65.7852
+    },
+    "Córdoba": {
+      "latitud": -31.4165,
+      "longitud": -64.1821
+    },
+    "Corrientes": {
+      "latitud": -27.4806,
+      "longitud": -58.8341
+    },
+    "Resistencia": {
+      "latitud": -27.4517,
+      "longitud": -58.9866
+    },
+    "Rawson": {
+      "latitud": -43.2535,
+      "longitud": -65.3097
+    },
+    "Paraná": {
+      "latitud": -31.7313,
+      "longitud": -60.5110
+    },
+    "Formosa": {
+      "latitud": -26.1852,
+      "longitud": -58.1751
+    },
+    "San Salvador de Jujuy": {
+      "latitud": -24.1858,
+      "longitud": -65.2995
+    },
+    "Santa Rosa": {
+      "latitud": -36.6167,
+      "longitud": -64.2833
+    },
+    "La Rioja": {
+      "latitud": -29.4111,
+      "longitud": -66.8563
+    },
+    "Mendoza": {
+      "latitud": -32.8895,
+      "longitud": -68.8458
+    },
+    "Posadas": {
+      "latitud": -27.3671,
+      "longitud": -55.8961
+    },
+    "Neuquén": {
+      "latitud": -38.9516,
+      "longitud": -68.0591
+    },
+    "Viedma": {
+      "latitud": -41.1456,
+      "longitud": -71.3082
+    },
+    "Salta": {
+      "latitud": -24.7859,
+      "longitud": -65.4117
+    },
+    "San Juan": {
+      "latitud": -31.5375,
+      "longitud": -68.5364
+    },
+    "San Luis": {
+      "latitud": -33.3016,
+      "longitud": -66.3378
+    },
+    "Río Gallegos": {
+      "latitud": -51.6226,
+      "longitud": -69.2181
+    },
+    "Santa Fe": {
+      "latitud": -31.6333,
+      "longitud": -60.7000
+    },
+    "Santiago del Estero": {
+      "latitud": -27.7951,
+      "longitud": -64.2615
+    },
+    "Ushuaia": {
+      "latitud": -54.8019,
+      "longitud": -68.3020
+    },
+    "San Miguel de Tucumán": {
+      "latitud": -26.8167,
+      "longitud": -65.2167
+    }
+  }
+  

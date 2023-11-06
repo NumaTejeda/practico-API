@@ -14,6 +14,7 @@ const colores = {
 	"21D": `${blue}`,
 	"21G": `${red}`,
 	"21A": `${yellow}`,
+	"21K":  `${green}`,
 	"21C": `${orange}`,
 	"21E": `${pink}`,
 	"21B": `${violet}`,

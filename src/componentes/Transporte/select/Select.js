@@ -1,11 +1,12 @@
 import './Select.css';
-function Select({ setFiltro, data, calcularPuntoMedio }) {
 
+function Select({ setFiltro, data, calcularPuntoMedio }) {
+    
     const handleSelectChange = (e) => {
         setFiltro(e.target.value); // Actualiza el estado con la opción seleccionada.
         calcularPuntoMedio();
     };
-
+    
     const sinDuplicados = new Set();
     const options = data ? data.map((item, index) => {
         if (!sinDuplicados.has(item.route_short_name)) {

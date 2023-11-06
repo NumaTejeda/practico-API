@@ -7,6 +7,7 @@ import SHADOW from '../../assets/transporteSVG/marker-shadow.png';
 import colores from './markerColor';
 
 function TransporteApp() {
+
     const coordenadasDefault = [-34.605425, -58.381555]; 
     const [puntoMedio, setPuntoMedio] = useState(coordenadasDefault);
     const [data, setData] = useState(null);
@@ -23,31 +24,38 @@ function TransporteApp() {
         popupAnchor: [1, -34],
         shadowSize: [41, 41]
     });
-    
-    
     const url = 'https://datosabiertos-transporte-apis.buenosaires.gob.ar:443/colectivos/vehiclePositionsSimple?agency_id=16&client_id=cb6b18c84b3b484d98018a791577af52&client_secret=3e3DB105Fbf642Bf88d5eeB8783EE1E6&route_short_name=108A';
-    useEffect(() => {
-        // Realiza la solicitud utilizando fetch con el método GET
-        fetch(url, {
+    const fetchTransporte = () =>fetch(url, {
             method: 'GET',
             redirect: 'follow',
         })
         .then((response) => {
             if (!response.ok) {
-                throw new Error(alert('UPS! Vuelvo a intentarlo mas tarde...'));
+                throw new Error(console.log('UPS! Vuelve a intentarlo mas tarde...'));
             }
             return response.json();
         })
         .then((responseData) => {
             // Almacena los datos en la variable de estado 'data'
+            console.log("cada5 s");
             setData(responseData);
             setLoading(false);
         })
         .catch((error) => {
             console.error('Error fetching data:', error);
-        });
-        
-    }, [loading]);
+    });
+  
+    useEffect(() => {fetchTransporte()}, [loading]);
+    useEffect(()=>{
+        const pedidoAPI = setInterval(()=>{
+            fetchTransporte();
+            console.log("Pedido");
+        }, 31000)
+        fetchTransporte();
+        return () => clearInterval(pedidoAPI);
+    }, [])
+
+    //setInterval(()=> setTimeout(() => fetchTransporte(), 5000));
     
     function actualizar() {
         setLoading(true);
@@ -78,11 +86,11 @@ function TransporteApp() {
                 </Popup>
             </Marker>
     )) : null;
-
+    //map.flyTo([40.737, -73.923], 8)
     return (
         <>
             <div id='AppTransporte'>
-                <MapContainer center={[puntoMedio[0], puntoMedio[1]]} zoom={12} scrollWheelZoom={false}>
+                <MapContainer center={[puntoMedio[0], puntoMedio[1]]} zoom={12} scrollWheelZoom={true}>
                     <Select setFiltro={setFiltro} data={data} calcularPuntoMedio={calcularPuntoMedio}/>
                     <button className='actualizar' onClick={actualizar}>Actualizar</button>
                     <TileLayer

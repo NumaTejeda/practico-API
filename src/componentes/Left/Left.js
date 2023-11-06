@@ -9,6 +9,8 @@ function Left({ data, loading, recargar }) {
     const highToDay = data?.daily?.temperature_2m_max[0];
     const lowToDay = data?.daily?.temperature_2m_min[0];
     // (idea) useState para src y otro para frase que acompaña, con codigoClima que busca dentro del json de codigos.
+
+
     return (
         <div className="left">
             {data && !loading ?
