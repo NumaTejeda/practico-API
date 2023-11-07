@@ -21,6 +21,7 @@
 }
 @media only screen and (max-width: 640px) {
   .today {
+    display: none;
     max-height: fit-content;
     max-width: 100%;
   }
@@ -28,6 +29,5 @@
     position: sticky;
     left: 6px;
     padding-top: 11px;
-    color: red;
   }
 }

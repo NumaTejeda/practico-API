@@ -7,3 +7,8 @@
     border-radius: 7px;
     width: 15vw;
 }
+@media only screen and (max-width: 640px) {
+    .select-bondis {
+      width: 35vw;
+    }
+  }

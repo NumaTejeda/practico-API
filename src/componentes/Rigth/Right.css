@@ -14,5 +14,11 @@
   h1 {
     align-self: center;
   }
+  #titleToDay{
+    display: none;
+  }
+  .right{
+    height: 100%;
+  }
 }
 

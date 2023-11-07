@@ -19,9 +19,9 @@ function Right({ data, loading, obtenerHora, coordenadasCity, setCity }) {
             <select className="selectCiudades" onChange={handleSelectChange}>
                 {options}
             </select>
-            <h1>Today</h1>
+            <h1 id="titleToDay">Hoy</h1>
             <Today data={data} loading={loading} />
-            <h1>Highlights</h1>
+            <h1 id="titleHighlights">Info</h1>
             <Highlights data={data} loading={loading} obtenerHora={obtenerHora} />
         </div>
     )

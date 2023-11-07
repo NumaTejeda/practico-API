@@ -29,28 +29,27 @@ function Highlights({ data, loading }) {
             {data && !loading ?
                 <>
                     <Panel
-                        title='UV Index'
+                        title='Indice UV'
                         dataNumber1={uvIndex}
                         dataString='Normal'
                     />
                     <Panel
-                        title='Wind Status'
+                        title='Estado del Viento'
                         dataNumber1={speedWind + "km/h"}
                         dataString='Tranqui'
                     />
                     <Panel
-                        title='Sunrise & Sunset'
+                        title='Salida/Puesta del Sol'
                         dataNumber1={sunRise + " AM"}
                         dataNumber2={sunSet + " PM"}
-                        dataString='Ta lindo'
                     />
                     <Panel
-                        title='Humedity'
+                        title='Humedad'
                         dataNumber1={humedity + " %"}
                         dataString='Normal'
                     />
                     <Panel
-                        title='Visibility'
+                        title='Visibilidad'
                         dataNumber1={visibility + " km"}
                         dataString='Average'
                     />
@@ -64,34 +63,33 @@ function Highlights({ data, loading }) {
                 :
                 <>
                     <Panel
-                        title='UV Index'
-                        dataNumber1="00"
+                        title='Indice UV'
+                        dataNumber1="1.7"
                         dataString='Normal'
                     />
                     <Panel
-                        title='Wind Status'
-                        dataNumber1="00"
+                        title='Estado del viento'
+                        dataNumber1="12 km/h"
                         dataString='Tranqui'
                     />
                     <Panel
-                        title='Sunrise & Sunset'
-                        dataNumber1="00 AM"
-                        dataNumber2="00 PM"
-                        dataString='Ta lindo'
+                        title='Salida/Puesta del sol'
+                        dataNumber1="06:00 AM"
+                        dataNumber2="19:30 PM"
                     />
                     <Panel
-                        title='Humedity'
-                        dataNumber1="00 %"
+                        title='Humedad'
+                        dataNumber1="25 %"
                         dataString='Normal'
                     />
                     <Panel
-                        title='Visibility'
-                        dataNumber1="00 km"
+                        title='Visibilidad'
+                        dataNumber1="4 km"
                         dataString='Average'
                     />
                     <Panel
                         title='Prob. de lluvia'
-                        dataNumber1="00 %"
+                        dataNumber1="14 %"
                         dataString='Unhealthy'
 
                     />

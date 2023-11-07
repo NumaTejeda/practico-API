@@ -1,11 +1,30 @@
-.App{
-    display: flex;
+.App {
+  display: flex;
+}
+.switch {
+  display: flex;
+  position: absolute;
+  padding: 3px;
+  border-radius: 5px;
+  bottom: 20px;
+  width: calc(100vw - 15px);
+  margin: auto;
+  z-index: 100000;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+}
+a {
+  width: 100vw;
+}
+.botones {
+  width: 100%;
 }
 @media only screen and (max-width: 640px) {
-    .App {
-      flex-direction: column;
-      max-height: fit-content;
-      width: calc(100% - 10px);
-      align-content: center;
-    }
+  .App {
+    flex-direction: column;
+    max-height: fit-content;
+    width: calc(100% - 10px);
+    align-content: center;
   }
+}

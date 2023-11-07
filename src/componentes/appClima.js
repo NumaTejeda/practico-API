@@ -36,6 +36,7 @@ function AppClima() {
         });
     }, [loading, apiUrl]);
 
+    //Quedo colgado, cambia el brillo del fondo segun si es de dia o noche. (ERROR se applica todo no solo al fondo)
     const clase = {
         filter: `brightness(100%)`,
         backgroundImage: "url('https://www.fondoin.gob.ve/wp-content/uploads/2022/08/PORTADA.png')"

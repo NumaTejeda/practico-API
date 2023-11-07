@@ -20,7 +20,11 @@ h1, h2 {
   .AppClima {
     flex-direction: column;
     max-height: fit-content;
-    width: calc(100% - 10px);
+    width: 100vw;
     align-content: center;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    height: 100vh;
   }
 }

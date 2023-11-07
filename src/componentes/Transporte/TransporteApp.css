@@ -9,7 +9,6 @@
     width: 100wh; 
     height: 100%;
     border-radius: 10px;
-    overflow-x: hidden;
 }
 .Container{
     display: flex;
@@ -18,7 +17,29 @@
 }
 .actualizar{
     position: absolute;
-    z-index: 100000;
+    z-index: 1000;
     left: 10px;
     bottom: 10px;
 }
+@media only screen and (max-width: 640px) {
+    #AppTransporte{
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        border-radius: 0;
+    }
+    .leaflet-container{
+        border-radius: 0;
+    }
+    .actualizar{
+        padding: 3px;
+        border-radius: 5px;
+        bottom: 20px;
+        width: calc(100vw - 20px);
+        margin: auto;
+        left: 0;
+        right: 0;
+
+    }
+}
+  

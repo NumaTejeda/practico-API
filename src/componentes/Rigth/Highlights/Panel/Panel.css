@@ -19,7 +19,11 @@
 @media only screen and (max-width: 647px) {
     .panel{
         max-width: 100%;
+        width: 100%;
         justify-content: center;
         align-items: center;
+        text-align: center;
+        padding: 10px 15px;
+
     }
 }

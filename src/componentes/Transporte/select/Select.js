@@ -26,7 +26,7 @@ function Select({ setFiltro, data, calcularPuntoMedio }) {
                 name="bondis"
                 className='select-bondis'
                 onChange={handleSelectChange}>
-                <option value='inicio'>Eleji tu bondi</option>
+                <option value='inicio'>Elegí tu bondi</option>
                 {options}
             </select>
         </>
