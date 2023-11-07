@@ -1,6 +1,7 @@
 .right {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 .right > h1 {
   margin-left: 15px;

@@ -1,7 +1,6 @@
 #AppTransporte{
-    width: 100%;
+    width: 50vw;
     height: calc(100vh - 10px);
-    border: 2px solid black;
     border-radius: 10px;
     margin: 5px;
 }
