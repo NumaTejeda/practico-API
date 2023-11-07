@@ -25,12 +25,14 @@ function Left({ data, loading, recargar }) {
                 </>
                 :
                 <>
-                    <h4 style={{ color: 'white' }}>Cargandoooo......</h4>
+                    <h1 style={{ color: 'white' }}>......</h1>
                     <img src={nube} alt="nube" id="img"></img>
                     <div>
-                        <h4 style={{ color: 'white' }}>High: cargando... </h4>
-                        <h4 style={{ color: 'white' }}>Low: Cargando...</h4>
+                        <h2 style={{ color: 'white' }}>High: ... </h2>
+                        <h2 style={{ color: 'white' }}>Low: ...</h2>
                     </div>
+                    <Boton recargar={recargar} />
+
                 </>
             }
         </div>

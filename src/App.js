@@ -3,7 +3,7 @@ import './App.css';
 import TransporteApp from './componentes/Transporte/TransporteApp';
 import AppClima from './componentes/appClima';
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom"
-import btnMap from "./assets/climaSVG/lluviaNocheSVG.svg";
+import { Icon } from '@iconify/react';
 
 function App() {
 
@@ -28,14 +28,10 @@ function App() {
           <BrowserRouter>
             <div className='switch'>
               <Link to="/transporte">
-                <button className='botones' id="botonT">
-                  Transporte
-                </button>
+                <Icon icon="fa6-solid:bus" color='red' style={{ fontSize: '1.5em' }} />
               </Link>
               <Link to="/practico-API">
-                <button className='botones' id="botonC">
-                  Clima
-                </button>
+                <Icon icon="vs:sun" color='yellow' style={{ fontSize: '1.5em' }} />
               </Link>
             </div>
             <Routes>

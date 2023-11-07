@@ -37,7 +37,6 @@ function TransporteApp() {
         })
         .then((responseData) => {
             // Almacena los datos en la variable de estado 'data'
-            console.log("cada5 s");
             setData(responseData);
             setLoading(false);
         })
@@ -49,7 +48,6 @@ function TransporteApp() {
     useEffect(()=>{
         const pedidoAPI = setInterval(()=>{
             fetchTransporte();
-            console.log("Pedido");
         }, 31000)
         fetchTransporte();
         return () => clearInterval(pedidoAPI);

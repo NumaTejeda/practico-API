@@ -3,19 +3,23 @@
 }
 .switch {
   display: flex;
+  background-color: #7883f3b3;
+  flex-direction: column;
+  box-shadow: -9px 2px 31px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -9px 2px 31px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -9px 2px 31px 0px rgba(0,0,0,0.75);
   position: absolute;
   padding: 3px;
-  border-radius: 5px;
-  bottom: 20px;
-  width: calc(100vw - 15px);
-  margin: auto;
+  border-radius: 5px 0px 0px 5px;
+  width: fit-content;
   z-index: 100000;
-  left: 0;
   right: 0;
-  bottom: 50px;
+  top: 14vh;
+
 }
 a {
-  width: 100vw;
+  width: fit-content;
+  margin: 1%;
 }
 .botones {
   width: 100%;
