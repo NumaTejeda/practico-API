@@ -1,5 +1,6 @@
 .App {
   display: flex;
+  background-color: #7541a5a6;
 }
 .switch {
   display: flex;
@@ -14,7 +15,7 @@
   width: fit-content;
   z-index: 100000;
   right: 0;
-  top: 14vh;
+  bottom: 22vh;
 }
 a {
   width: fit-content;

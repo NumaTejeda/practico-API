@@ -1,6 +1,6 @@
 import Highlights from "./Highlights/Highlights";
-import Today from "./Today/Today";
 import './Right.css';
+import Grafico from "./Today/Grafico";
 function Right({ data, loading, obtenerHora, coordenadasCity, setCity }) {
     
     const handleSelectChange = (e) => {
@@ -20,7 +20,10 @@ function Right({ data, loading, obtenerHora, coordenadasCity, setCity }) {
                 {options}
             </select>
             <h1 id="titleToDay">Hoy</h1>
-            <Today data={data} loading={loading} />
+            {/* <Today data={data} loading={loading} /> */}
+            <Grafico
+                data={data}
+            />
             <h1 id="titleHighlights">Info</h1>
             <Highlights data={data} loading={loading} obtenerHora={obtenerHora} />
         </div>

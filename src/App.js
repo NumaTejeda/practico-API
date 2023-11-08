@@ -26,12 +26,13 @@ function App() {
         :
         <>
           <BrowserRouter>
+            {/* Botones */}
             <div className='switch'>
               <Link to="/transporte">
-                <Icon icon="fa6-solid:bus" color='red' style={{ fontSize: '1.5em' }} />
+                <Icon icon="fa6-solid:bus" color='blueViolet' style={{ fontSize: '1.5rem' }} />
               </Link>
               <Link to="/practico-API">
-                <Icon icon="vs:sun" color='yellow' style={{ fontSize: '1.5em' }} />
+                <Icon icon="vs:sun" color='yellow' style={{ fontSize: '1.5rem' }} />
               </Link>
             </div>
             <Routes>

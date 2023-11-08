@@ -3,13 +3,14 @@
   box-sizing: border-box;
   margin: 5px;
   margin-right: 10px;
-  border: 2px solid red;
   width: 50vw;
   max-height: 100vh;
   max-width: 657px;
   border-radius: 10px;
+  background: url('../assets/climaSVG/cielo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 h1, h2 {
   color: white;
@@ -26,5 +27,8 @@ h1, h2 {
     border: 0;
     border-radius: 0;
     height: 100vh;
+  }
+  .recharts-responsive-container {
+    display: none;
   }
 }
