@@ -15,6 +15,7 @@
     width: 100%; 
 }
 .actualizar{
+    background-color: white;
     position: absolute;
     z-index: 1000;
     left: 10px;
@@ -31,13 +32,14 @@
         border-radius: 0;
     }
     .actualizar{
-        padding: 3px;
+        padding: 5px;
         border-radius: 5px;
-        bottom: 20px;
-        width: calc(100vw - 20px);
-        margin: auto;
-        left: 0;
-        right: 0;
+        bottom: unset;
+        top: unset;
+        width: 40vw;
+        margin: 10px 15vw;
+        left: 100;
+        right: unset;
     }
 }
   

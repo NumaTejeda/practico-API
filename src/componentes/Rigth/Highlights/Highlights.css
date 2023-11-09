@@ -14,7 +14,7 @@
 @media only screen and (max-width: 640px) {
   .highlights {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 0;
     justify-content: center;
     max-width: 100%;
@@ -24,6 +24,10 @@
   #titleHighlights{
     display: none;
   }
+  .panel:nth-last-child(-n+2){
+    display:none;
+  }
+
 }
 
 /* .parent {

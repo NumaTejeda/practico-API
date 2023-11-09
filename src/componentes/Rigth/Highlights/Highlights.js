@@ -68,14 +68,15 @@ function Highlights({ data, loading }) {
                         dataString='Normal'
                     />
                     <Panel
+                        title='Prob. de lluvia'
+                        dataNumber1="14 %"
+                        dataString='Unhealthy'
+
+                    />
+                    <Panel
                         title='Estado del viento'
                         dataNumber1="12 km/h"
                         dataString='Tranqui'
-                    />
-                    <Panel
-                        title='Salida/Puesta del sol'
-                        dataNumber1="06:00 AM"
-                        dataNumber2="19:30 PM"
                     />
                     <Panel
                         title='Humedad'
@@ -88,10 +89,9 @@ function Highlights({ data, loading }) {
                         dataString='Average'
                     />
                     <Panel
-                        title='Prob. de lluvia'
-                        dataNumber1="14 %"
-                        dataString='Unhealthy'
-
+                        title='Salida/Puesta del sol'
+                        dataNumber1="06:00 AM"
+                        dataNumber2="19:30 PM"
                     />
                 </>
 
