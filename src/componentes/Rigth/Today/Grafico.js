@@ -17,7 +17,7 @@ function Grafico({ data }) {
     return {
       hora: `${hour.toString().padStart(2, '0')}:00`, //padStart verifica que la longitud se de 2, si no lo es agrega un cero.
       temp,
-      lluvia: lluvia ? lluvia / 2 : 0, //Divido la probabilidad de lluvia por 2 para mantener laproporcion del grafico
+      lluvia: lluvia ? lluvia : 0, //Divido la probabilidad de lluvia por 2 para mantener laproporcion del grafico
     };
   });
 
@@ -38,10 +38,11 @@ function Grafico({ data }) {
         <CartesianGrid strokeDasharray="0.5 10" />
         <XAxis dataKey="hora" tick={{ fill: 'white' }}/>
         <YAxis dataKey="" tick={{ fill: 'white'}}/>
+        <YAxis yAxisId="right" orientation="right" stroke="#82ca9d" tick={{ fill: 'blue'}} />
         <Tooltip />
         <Legend />
         <Bar dataKey="temp" fill="blueViolet" activeBar={<Rectangle fill="red" stroke="blue" />} />
-        <Bar dataKey="lluvia" fill="blue" activeBar={<Rectangle fill="gold" stroke="purple" />} />
+        <Bar yAxisId="right" dataKey="lluvia" fill="blue" activeBar={<Rectangle fill="gold" stroke="purple" />} />
       </BarChart>
     </ResponsiveContainer>
   );

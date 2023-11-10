@@ -1,5 +1,5 @@
 import './TransporteApp.css';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 import { useState, useEffect } from 'react';
 import { icon } from 'leaflet';
 import Select from './select/Select';
@@ -57,6 +57,21 @@ function TransporteApp() {
         setLoading(true);
     }
 
+    
+    const mappedData = data ? data.filter((item) => filtro === "" || item.route_short_name === filtro)
+    .map((item, index) => (
+            <Marker position={[item.latitude, item.longitude]} key={index} icon={colorIcon}>
+                <Popup>
+                    {item.route_short_name + " "}
+                    {item.trip_headsign}
+                </Popup>
+            </Marker>
+        )) : null;
+    // function Vista() {
+    //     const map = useMap();
+    //     map.setView(puntoMedio, 10);
+    //     return null;
+    // };
     const calcularPuntoMedio = () => {
         let seleccion = data ? data.filter((item) => item.route_short_name === filtro) : null;
         console.log(seleccion)
@@ -72,20 +87,10 @@ function TransporteApp() {
         setPuntoMedio(middlePoint);
     };
 
-    const mappedData = data ? data.filter((item) => filtro === "" || item.route_short_name === filtro)
-        .map((item, index) => (
-            <Marker position={[item.latitude, item.longitude]} key={index} icon={colorIcon}>
-                <Popup>
-                    {item.route_short_name + " "}
-                    {item.trip_headsign}
-                </Popup>
-            </Marker>
-        )) : null;
-
     return (
         <>
             <div id='AppTransporte'>
-                <MapContainer center={[puntoMedio[0], puntoMedio[1]]} zoom={12} scrollWheelZoom={true}>
+                <MapContainer center={[puntoMedio[0], puntoMedio[1]]} zoom={11} scrollWheelZoom={true}>
                     <Select setFiltro={setFiltro} data={data} calcularPuntoMedio={calcularPuntoMedio} />
                     <button className='actualizar' onClick={actualizar}>Actualizar</button>
                     <TileLayer
@@ -99,3 +104,5 @@ function TransporteApp() {
     )
 }
 export default TransporteApp;
+
+

@@ -8,7 +8,6 @@ import { Icon } from '@iconify/react';
 function App() {
 
   const [changeWidth, setChangeW] = useState(window.screen.width);
-
   function handleChange() {
     setChangeW(window.screen.width)
   }
@@ -20,7 +19,10 @@ function App() {
     <div className="App">
       {changeWidth > '632' ?
         <>
-          <AppClima />
+        
+          <AppClima 
+            
+          />
           <TransporteApp />
         </>
         :
@@ -36,9 +38,9 @@ function App() {
               </Link>
             </div>
             <Routes>
-              <Route path='/practico-API' element={ <AppClima/> } />
-              <Route path="/transporte" element={ <TransporteApp/>} />
-            </Routes> 
+              <Route path='/practico-API' element={<AppClima />} />
+              <Route path="/transporte" element={<TransporteApp />} />
+            </Routes>
           </BrowserRouter>
         </>
       }
