@@ -30,7 +30,7 @@ function Grafico({ data }) {
         data={dataObject}
         margin={{
           top: 30,
-          right: 30,
+          right: 0,
           left: 0,
           bottom: 0,
         }}
