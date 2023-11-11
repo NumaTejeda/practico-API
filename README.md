@@ -1,6 +1,6 @@
-#Aplicacion Clima & Transporte. :sunny:  :umbrella:  :cloud:
+# Aplicacion Clima & Transporte. :sunny:  :umbrella:  :cloud:
 
-##Se siguió el diseño sugerido. :snowflake:
+## Se siguió el diseño sugerido. :snowflake:
 
 ![Diseño Sugerido](./dashboard.jpg)
 
